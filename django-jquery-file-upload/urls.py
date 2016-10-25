@@ -4,6 +4,7 @@ from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+import fileupload.views
 admin.autodiscover()
 
 urlpatterns = [
@@ -11,6 +12,7 @@ urlpatterns = [
     url(r'^upload/', include('fileupload.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^ui/', include('userinterface.urls')),
+    url(r'^fetch/$', fileupload.views.analyze)
 ]
 
 if settings.DEBUG:

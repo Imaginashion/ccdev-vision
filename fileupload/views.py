@@ -2,11 +2,12 @@
 import json
 
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.views.generic import CreateView, DeleteView, ListView
 from .models import Picture
 from .response import JSONResponse, response_mimetype
 from .serialize import serialize
-
+import fetch
 
 class PictureCreateView(CreateView):
     model = Picture
@@ -23,6 +24,10 @@ class PictureCreateView(CreateView):
     def form_invalid(self, form):
         data = json.dumps(form.errors)
         return HttpResponse(content=data, status=400, content_type='application/json')
+
+def analyze(request):
+    dictionary = fetch.fetch_from_amazon('green-shirt-men')
+    return render(request, 'products.html', {'dict': dictionary})
 
 class BasicVersionCreateView(PictureCreateView):
     template_name_suffix = '_basic_form'

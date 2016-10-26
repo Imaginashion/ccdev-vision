@@ -71,6 +71,7 @@ def upload_js():
             </button>
             <input type="checkbox" name="delete" value="1" class="toggle">
         </td>
+<<<<<<< HEAD
         <td>
             <a href={%=locale.fileupload.analyzeUrl%}>
                 
@@ -78,6 +79,8 @@ def upload_js():
                 
             </a>
         </td>
+=======
+>>>>>>> 0f0365d8a6e98883178b2fbf4ffc1d2db99058a2
     </tr>
 {% } %}
 </script>

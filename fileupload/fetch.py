@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import requests, random
+=======
+import requests
+>>>>>>> 0f0365d8a6e98883178b2fbf4ffc1d2db99058a2
 import datetime
 import hmac
 import hashlib

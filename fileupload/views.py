@@ -63,6 +63,8 @@ def analyze(request):
     dictionary = fetch_py3.fetch_from_amazon(string)
     return render(request, 'products.html', {'dict': dictionary, 'query': string})
     '''
+    dictionary = fetch.fetch_from_amazon('green-shirt-men')
+    return render(request, 'products.html', {'dict': dictionary})
 
 class BasicVersionCreateView(PictureCreateView):
     template_name_suffix = '_basic_form'

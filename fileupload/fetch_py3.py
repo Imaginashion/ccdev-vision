@@ -22,7 +22,7 @@ def fetch_from_amazon(item_to_find):
 	Version="2011-08-01"
 	request_param = "AWSAccessKeyId=" + AWSAccessKeyId + "&AssociateTag=" + AssociateTag + "&Keywords=" + Keywords + "&" + next_string + "&Version=" + Version 
 	string_to_sign = "GET\nwebservices.amazon.in\n/onca/xml\n" + request_param
-	#print "String=" + string_to_sign
+	print("String_to_sign :" + string_to_sign)
 	signature = hmac.new(secret, string_to_sign.encode('utf-8'), hashlib.sha256).digest()
 	#print "Signature=" + urllib.quote(base64.b64encode(signature),safe='')
 	request = domain + request_param + "&Signature=" + urllib.parse.quote(base64.b64encode(signature),safe='')
@@ -31,7 +31,7 @@ def fetch_from_amazon(item_to_find):
 	for child in response:
 		xml_str += child.decode("utf-8") 
 		
-	#print xml_str
+	print(xml_str)
 	root = ET.fromstring(xml_str)
 	count = 0
 	prod_url = []
@@ -81,7 +81,7 @@ def fetch_from_amazon(item_to_find):
 		obj = [title[x]]
 		obj.append(prod_url[x])
 		obj.append(features[x])
-		obj.append(color[x])
+
 		try:
 			obj.append(img_url[x])
 		except Exception as e:
@@ -91,6 +91,10 @@ def fetch_from_amazon(item_to_find):
 		except Exception as e:
 			cost = 1000 + randint(1,1000)
 			obj.append("INR " + str(cost))
+		try:
+			obj.append(color[x])
+		except Exception as e:
+			break
 		listi.append(obj)
 		x += 1
 

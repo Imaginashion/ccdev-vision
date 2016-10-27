@@ -1,5 +1,5 @@
 *.json
 res/
 api-client-downloads/
-__pychche__/
+__pycache__/
 venv/

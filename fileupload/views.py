@@ -31,14 +31,15 @@ class PictureCreateView(CreateView):
 
 def analyze(request):
     search_string = sample_call.main_1()#{0: 'jeans', 1: 'denim', 2: 'clothing', 3: 'trousers', 4: 'pocket'}
-    #print(search_string)
+    print(search_string)
     #return HttpResponse(search_string)
-    search_string = search_string.strip("[]").replace("'", "").replace(" ","-").split(",")
+    search_string = search_string.replace(", ", ",").strip("[]").replace("'", "").replace(" ","-").split(",")
     #return HttpResponse(search_string)
     string = ""
     for x in search_string:
-        string += x.replace(" ","-")
-    #print(string)
+        string += x + "-"
+    string.strip("-")
+    print(string)
     #string = 'jeans-denim-clothing-trousers-pocket'
     dictionary = fetch_py3.fetch_from_amazon(string)
     return render(request, 'products.html', {'dict': dictionary, 'query': string})

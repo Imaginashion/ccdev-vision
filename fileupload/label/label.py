@@ -54,7 +54,7 @@ def main(photo_file):
                 },
                 'features': [{
                     'type': 'LABEL_DETECTION',
-                    'maxResults': 4
+                    'maxResults': 3
                 }]
             }]
         })
@@ -64,7 +64,7 @@ def main(photo_file):
         response = service_request.execute()
         #print ('Response : %s' % (response))
         label_list = []
-        for i in range(4):
+        for i in range(3):
             label = response['responses'][0]['labelAnnotations'][i]['description']
             #print (str(label))
             #print("label is str : " + label)

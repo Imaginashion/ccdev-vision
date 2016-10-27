@@ -376,8 +376,7 @@
                   <div class='nav-right'>
                      <script type='text/javascript'>window.navmet.tmp=+new Date();</script>
                      <div id='nav-swmslot'>
-                        
-           					
+
                      </div>
                      <script type='text/javascript'>window.navmet.push({key:'SWM',end:+new Date(),begin:window.navmet.tmp});</script>
                   </div>
@@ -1122,7 +1121,7 @@
                         <div id="centerMinus" class='' >
                            <div id="atfResults" class="a-row s-result-list-parent-container">
                               <ul id="s-results-list-atf" class="s-result-list s-col-1 s-col-ws-1 s-result-list-hgrid s-height-equalized s-list-view s-text-condensed">
-                              	{%for prod in  dict%}
+                                {%for prod in  dict%}
                                  <li id="result" class="s-result-item celwidget">
                                     <div class="s-item-container">
                                        <div class="a-fixed-left-grid">
@@ -1421,23 +1420,23 @@
                               // sendLoggingRequest("js_csa_:t1_request@v=1"); 
                               
                               var pageOptions = { 
-                              	'pubId': 'amazon-in',
-                              	'query': 'green\x20shirt',
-                              	'domTemplate': 'twoColumnNumbered',
-                              	'cssFileName': 'amazon_numbered',
-                              	'channel': 'g-channel-1',
-                              	'adIconUrl': 'http://afs.googleusercontent.com/amazon/icon-offsite-sl-7069-t4._V171196157_.png',
-                              	'linkTarget': '_blank',
-                              	'hl': 'en',
-                              	'gl': 'in',	
-                              	'adtest': 'off',
-                              	'adPage': 1,
-                              	'referrer': ''
+                                'pubId': 'amazon-in',
+                                'query': 'green\x20shirt',
+                                'domTemplate': 'twoColumnNumbered',
+                                'cssFileName': 'amazon_numbered',
+                                'channel': 'g-channel-1',
+                                'adIconUrl': 'http://afs.googleusercontent.com/amazon/icon-offsite-sl-7069-t4._V171196157_.png',
+                                'linkTarget': '_blank',
+                                'hl': 'en',
+                                'gl': 'in', 
+                                'adtest': 'off',
+                                'adPage': 1,
+                                'referrer': ''
                               }; 
                               var adblock1 = {
-                              	'container': 'sponsoredLinksContent',
-                              	'number': 4,
-                              	'clicktrackUrl': 'http://rd-eu.a9.com/srv/redirect/?info=AIdGANp8HnejMSwWArksKptd2WMES.Mvl-7Q4-5JykBqCY109.Beb16o81IV5Jqr88va1x6MEm22n0PA-MYdCL9I2iEaxDQBKIkchpVST.IyPJcO1f0hFG0sA3iq5Wtp.xVEO.9W7VmbeyJ8RRYXMbcQN0N5Dstl6Hm6dPY-NB.qq.mQgZnxbYMHn4Uz3yxpnjVEnmxcJzC2.qoO--NwlwwwoO.BRTduj1LZ9sz43.x.3ofAZy90n0Y3hgTL5OmjmU-J1pUx1KQEa10-GRIS4Vj8gneYcSZ9flVB2DxUWVlw-EDzKRyOp2DSp420cWmFlr6ykIcpfVoFqKPkmlhoPDa7KJqs2M1wyA__&awt=1&s='
+                                'container': 'sponsoredLinksContent',
+                                'number': 4,
+                                'clicktrackUrl': 'http://rd-eu.a9.com/srv/redirect/?info=AIdGANp8HnejMSwWArksKptd2WMES.Mvl-7Q4-5JykBqCY109.Beb16o81IV5Jqr88va1x6MEm22n0PA-MYdCL9I2iEaxDQBKIkchpVST.IyPJcO1f0hFG0sA3iq5Wtp.xVEO.9W7VmbeyJ8RRYXMbcQN0N5Dstl6Hm6dPY-NB.qq.mQgZnxbYMHn4Uz3yxpnjVEnmxcJzC2.qoO--NwlwwwoO.BRTduj1LZ9sz43.x.3ofAZy90n0Y3hgTL5OmjmU-J1pUx1KQEa10-GRIS4Vj8gneYcSZ9flVB2DxUWVlw-EDzKRyOp2DSp420cWmFlr6ykIcpfVoFqKPkmlhoPDa7KJqs2M1wyA__&awt=1&s='
                               };
                               
                               var handleSLSize = function(hSl) {
@@ -1505,49 +1504,49 @@
                               };
                               
                               var slAdsArgs = {
-                              	"adProperties": adblock1, 
-                              	"pageOptions": pageOptions, 
-                              	"operation": "showSLAds"
+                                "adProperties": adblock1, 
+                                "pageOptions": pageOptions, 
+                                "operation": "showSLAds"
                               };
                               
                               
                               function initSLFrame() {
                                    // sendLoggingRequest("js_csa_:t3_request@v=1");
-                              	  cfSlLoaded = new Date().getTime();
-                                 	  var slIframeElem = document.getElementById("sponsoredLinksCsaIframe");
-                              	
-                              	  if(slIframeElem) {
-                              		  slIframeElem.contentWindow.postMessage(JSON.stringify(slAdsArgs), "https://d14qd3he45186l.cloudfront.net");
-                              	  }
+                                  cfSlLoaded = new Date().getTime();
+                                    var slIframeElem = document.getElementById("sponsoredLinksCsaIframe");
+                                
+                                  if(slIframeElem) {
+                                    slIframeElem.contentWindow.postMessage(JSON.stringify(slAdsArgs), "https://d14qd3he45186l.cloudfront.net");
+                                  }
                               }
                               
                               var emitSLFeedbackForm = function(visUrls) {};
                               
                               var processSLIframeMessage = function(event) {
-                              	if(event.origin != 'https://d14qd3he45186l.cloudfront.net') {
-                              		return;
-                              	}
-                              	var slMessage = JSON.parse(event.data);
-                              	if(slMessage.operation == 'adsReturned') {
-                              		handleLoadedSL(slMessage.visUrls);
-                              		emitSLFeedbackForm(slMessage.visUrls);
-                              	} else if(slMessage.operation == 'jsLoaded') {
-                              		jsSlLoaded = new Date().getTime();
-                              		readyCallGoogle = slMessage.readyCallGoogle;
-                              	} else if(slMessage.operation == 'resize') {
-                              		handleSLSize(slMessage.height);
-                              	} else if(slMessage.operation == 'initializeFrame') {
-                              		initSLFrame();
-                              	}
+                                if(event.origin != 'https://d14qd3he45186l.cloudfront.net') {
+                                  return;
+                                }
+                                var slMessage = JSON.parse(event.data);
+                                if(slMessage.operation == 'adsReturned') {
+                                  handleLoadedSL(slMessage.visUrls);
+                                  emitSLFeedbackForm(slMessage.visUrls);
+                                } else if(slMessage.operation == 'jsLoaded') {
+                                  jsSlLoaded = new Date().getTime();
+                                  readyCallGoogle = slMessage.readyCallGoogle;
+                                } else if(slMessage.operation == 'resize') {
+                                  handleSLSize(slMessage.height);
+                                } else if(slMessage.operation == 'initializeFrame') {
+                                  initSLFrame();
+                                }
                               }
                               
                               if(typeof registeredSLEventListener == 'undefined') {
-                              	var registeredSLEventListener = 1;
-                              	if(window.addEventListener) {
-                              		window.addEventListener("message", processSLIframeMessage, false);
-                              	} else {
-                              		window.attachEvent("onmessage", processSLIframeMessage);
-                              	}
+                                var registeredSLEventListener = 1;
+                                if(window.addEventListener) {
+                                  window.addEventListener("message", processSLIframeMessage, false);
+                                } else {
+                                  window.attachEvent("onmessage", processSLIframeMessage);
+                                }
                               }
                               
                               var isIframLaunched = 0;
@@ -1559,12 +1558,12 @@
                                                  uet('af', 'a9c-csa-search', {wb: 1});
                                                }
                               
-                                    //	 sendLoggingRequest("js_csa_:t2_request@v=1");
-                                 	 	 var slIframeElem = document.getElementById("sponsoredLinksCsaIframe");
-                              		
-                              		 if(slIframeElem && !isIframLaunched) {
-                                  		 slIframeElem.src="https://d14qd3he45186l.cloudfront.net/ads-search32.html"; 
-                              		 }
+                                    //   sendLoggingRequest("js_csa_:t2_request@v=1");
+                                     var slIframeElem = document.getElementById("sponsoredLinksCsaIframe");
+                                  
+                                   if(slIframeElem && !isIframLaunched) {
+                                       slIframeElem.src="https://d14qd3he45186l.cloudfront.net/ads-search32.html"; 
+                                   }
                                                isIframLaunched = 1;
                               
                                                if(window.ue && ue.tag) {
@@ -1576,24 +1575,24 @@
                                                   uex('ld', 'a9c-csa-search', {wb: 1});
                                                }
                               
-                                 	  }
+                                    }
                               });
                               
                               setTimeout(function() {
                               
-                                    if (!isIframLaunched){	
+                                    if (!isIframLaunched){  
                               
                                                if (typeof uet == 'function') {
                                                  uet('af', 'a9c-csa-search', {wb: 1});
                                                }
                               
-                              	  //    sendLoggingRequest("js_csa_:t2_request@v=1");
-                              	   	  var slIframeElem = document.getElementById("sponsoredLinksCsaIframe");
-                              			
-                              		  if(slIframeElem) {
-                              	    	  slIframeElem.src="https://d14qd3he45186l.cloudfront.net/ads-search32.html"; 
-                              		  }
-                                 	 	 isIframLaunched = 1;
+                                  //    sendLoggingRequest("js_csa_:t2_request@v=1");
+                                      var slIframeElem = document.getElementById("sponsoredLinksCsaIframe");
+                                    
+                                    if(slIframeElem) {
+                                        slIframeElem.src="https://d14qd3he45186l.cloudfront.net/ads-search32.html"; 
+                                    }
+                                     isIframLaunched = 1;
                               
                                                if(window.ue && ue.tag) {
                                                   ue.tag("a9c-csa-search-timeout")
@@ -1897,7 +1896,7 @@
                
                  
                  if (!$.searchAjax) {
-                 	return;
+                  return;
                  }
                  
                  if ($.searchAjax.isInitialized()) {
@@ -1905,7 +1904,7 @@
                  }
                  
                  var initParams = {
-                	  
+                    
                     "rhsWeblab" : 1,
                     
                    "spinnerAttr" : {"width": 52, "height": 152, "cssClass" : "loadingSpinnerRhs loadingSpinner"},
@@ -2212,7 +2211,7 @@
                         <td class="navFooterDescSpacer" style="width: 4%"></td>
                         <td class="navFooterDescItem"><a href='http://www.yoyo.com/' class='nav_a'>Yoyo.com<br/> <span class="navFooterDescText">A Happy Place<br/> To Shop For Toys</span></a></td>
                         <td class="navFooterDescSpacer" style="width: 4%"></td>
-                        <td class="navFooterDescItem"><a href='https://www.amazonbusiness.in/' class='nav_a'>	
+                        <td class="navFooterDescItem"><a href='https://www.amazonbusiness.in/' class='nav_a'> 
                            Amazon Business<br/> <span class="navFooterDescText">Everything For<br/> Your Business</span></a>
                         </td>
                      </tr>

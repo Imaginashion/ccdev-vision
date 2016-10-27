@@ -20,8 +20,8 @@ def main():
     return search_string
 
 def main_1():
-    newest_image = max(glob.iglob(os.path.join(os.path.dirname(os.path.abspath(__file__)),'../django-jquery-file-upload/media/pictures/*.jpg')), key=os.path.getctime)
-    print(newest_image)
+    newest_image = max(glob.iglob('/home/ssm/Documents/projects/djangoProjects/october/cloud-vision1/django-jquery-file-upload/media/pictures/*.jpg'), key=os.path.getctime)
+    print("newest image: "+ newest_image)
     path_to_script = './label/label.py '
     command = path_to_script + newest_image
     #label_dict = subprocess.check_output([path_to_script, newest])
@@ -33,7 +33,7 @@ def main_1():
     #print(label_list[0:-1])
     return label_list[0:-1]
 
-main_1()
+#main_1()
 #newest = max(glob.iglob('../django-jquery-file-upload/label/resources/*.jpg'), key=os.path.getctime)
 #path_to_image = newest
 #path_to_script = "./../django-jquery-file-upload/label/label.py"

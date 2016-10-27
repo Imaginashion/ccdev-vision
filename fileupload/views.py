@@ -39,14 +39,12 @@ def analyze(request):
     string = ""
     i = 0
     for x in search_string:
-        if (x == 'clothing' or string == 'product'):
-            i+=1
-            continue 
-        else:
-            string += x
-            if (i <= 2):
-                string += "+"
-        i+=1
+        if (x == 'clothing' or x == 'product'):
+            continue
+        string += x
+        i += 1
+        if(i <= 2):
+            string += "+"
     print(string)
     #string = 'jeans-denim-clothing-trousers-pocket'
     dictionary = fetch_py3.fetch_from_amazon(string)

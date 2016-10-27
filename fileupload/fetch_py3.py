@@ -22,7 +22,7 @@ def fetch_from_amazon(item_to_find):
 	Version="2011-08-01"
 	request_param = "AWSAccessKeyId=" + AWSAccessKeyId + "&AssociateTag=" + AssociateTag + "&Keywords=" + Keywords + "&" + next_string + "&Version=" + Version 
 	string_to_sign = "GET\nwebservices.amazon.in\n/onca/xml\n" + request_param
-	#print "String=" + string_to_sign
+	#print("String_to_sign :" + string_to_sign)
 	signature = hmac.new(secret, string_to_sign.encode('utf-8'), hashlib.sha256).digest()
 	#print "Signature=" + urllib.quote(base64.b64encode(signature),safe='')
 	request = domain + request_param + "&Signature=" + urllib.parse.quote(base64.b64encode(signature),safe='')
@@ -31,7 +31,7 @@ def fetch_from_amazon(item_to_find):
 	for child in response:
 		xml_str += child.decode("utf-8") 
 		
-	#print xml_str
+	#print(xml_str)
 	root = ET.fromstring(xml_str)
 	count = 0
 	prod_url = []
@@ -93,7 +93,7 @@ def fetch_from_amazon(item_to_find):
 			obj.append("INR " + str(cost))
 		listi.append(obj)
 		x += 1
-
+	print(listi)
 	return listi
 
 #fetch_from_amazon('green-shirt-men')

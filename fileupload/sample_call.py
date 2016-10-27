@@ -20,7 +20,7 @@ def main():
     return search_string
 
 def main_1():
-    newest_image = max(glob.iglob('/home/ssm/Documents/projects/djangoProjects/october/cloud-vision1/django-jquery-file-upload/media/pictures/*.jpg'), key=os.path.getctime)
+    newest_image = max(glob.iglob(os.path.join(os.path.dirname(os.path.abspath(__file__)),'../django-jquery-file-upload/media/pictures/*.jpg')), key=os.path.getctime)
     print(newest_image)
     path_to_script = './label/label.py '
     command = path_to_script + newest_image

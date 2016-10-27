@@ -34,11 +34,19 @@ def analyze(request):
     print(search_string)
     #return HttpResponse(search_string)
     search_string = search_string.replace(", ", ",").strip("[]").replace("'", "").replace(" ","-").split(",")
+    print(search_string)
     #return HttpResponse(search_string)
     string = ""
+    i = 0
     for x in search_string:
-        string += x + "-"
-    string.strip("-")
+        if (x == 'clothing' or string == 'product'):
+            i+=1
+            continue 
+        else:
+            string += x
+            if (i <= 2):
+                string += "+"
+        i+=1
     print(string)
     #string = 'jeans-denim-clothing-trousers-pocket'
     dictionary = fetch_py3.fetch_from_amazon(string)

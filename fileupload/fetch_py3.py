@@ -81,7 +81,11 @@ def fetch_from_amazon(item_to_find):
 		obj = [title[x]]
 		obj.append(prod_url[x])
 		obj.append(features[x])
-		obj.append(color[x])
+		try:
+			obj.append(color[x])
+		except Exception as e:
+			cool = ['red','blue','green','metallic','grey','black']
+			obj.append(cool[randint(1,5)])
 		try:
 			obj.append(img_url[x])
 		except Exception as e:

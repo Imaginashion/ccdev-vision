@@ -31,14 +31,18 @@ class PictureCreateView(CreateView):
 
 def analyze(request):
     search_string = sample_call.main_1()#{0: 'jeans', 1: 'denim', 2: 'clothing', 3: 'trousers', 4: 'pocket'}
-    #print(search_string)
+    print(search_string)
     #return HttpResponse(search_string)
 
+
     search_string = search_string.strip("[]").replace("'", "").replace(" ","-").split(",")
+
     #return HttpResponse(search_string)
     string = ""
+    i = 0
     for x in search_string:
-        if(x == '-clothing' or x == '-product'):
+
+        if(x == '-clothing' or x == '-product' or x == 'clothing' or x == 'product'):
             continue
         string += x.replace(" ","-")
     #print(string)

@@ -8,7 +8,7 @@ import fileupload.views
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', lambda x: HttpResponseRedirect('/upload/new/')),
+    url(r'^$', lambda x: HttpResponseRedirect('/ui/about')),
     url(r'^upload/', include('fileupload.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^ui/', include('userinterface.urls')),

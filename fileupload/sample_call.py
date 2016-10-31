@@ -15,6 +15,7 @@ def main():
             continue
         else:
             search_string += label_dict[i] + "-"
+    search_string.strip("-")
     print(" Search String : " + search_string)
     return search_string
 

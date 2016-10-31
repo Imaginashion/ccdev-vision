@@ -29,6 +29,8 @@ fileupload/models.py as commented in the file.
 
 Set up a Trial Account on Google Console which will provide $300 worth of free credits for testing purposes.
 
+Set up Amazon Account to retrieve Keys for authentication with API calls.
+
 
 ##Installation
 

@@ -1,4 +1,4 @@
-# Imaginashion - Product Recognition using Computer Vision
+# Imaginashion - Product Recognition and Retrieval
 
 ##Introduction
 

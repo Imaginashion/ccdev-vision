@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This is a small example of a Computer Vision Application using jQuery File Upload in Django. 
+This is a small example of a Computer Vision Application that takes in fashion images and retrieves corresponding products from Amazon. The match is based on keywords describing the clothing returned by the Google Cloud Vision API and the Amazon Search Results for the same keywords.
+
+## Description
 
 Here, you'll find a Django project with a minimal app. You can run the example standalone by cloning the repository, running the migrations, adding the keys and starting the server.
 
@@ -35,12 +37,14 @@ Set up Amazon Account to retrieve Keys for authentication with API calls.
 ## Installation
 
 * Running on Python 3.5.4 and Django 1.9.8
-* pip install -r requirements.txt (will install django and pillow)
-* python manage.py migrate
-* python manage.py runserver
-* configure Amazon API Key
-* configure Google Cloud Vision API Key
-* go to localhost:8000/upload/new/ and upload some files
+
+      pip install -r requirements.txt (will install django and pillow)
+      python manage.py migrate
+      python manage.py runserver
+      
+* Obtain and Configure your **[Amazon](https://docs.aws.amazon.com/AWSECommerceService/latest/DG/ItemSearch.html) API Key**
+* Obtain and Configure **[Google Cloud Vision](https://cloud.google.com/vision/) API Key**
+* go to `localhost:8000/upload/new/` and upload some files
 
 
 ## References
